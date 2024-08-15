@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Python + Flash</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/147073922?v=4">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/index.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="begin">
+    <img id="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="100"/>
+    <h1>Consuming API for <span>Python + Flask</span></h1>
+    </div>
+
+    <div class="container">
+            <div class="row">
+                {% for video in data %}
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="http://www.dailymotion.com/thumbnail/video/{{ video['id'] }}" alt="Title" />
+                        <div class="card-body">
+                            <strong class="card-title">{{ video['title'] }}</strong>
+                            
+                            <p class="card-text"> Channel: {{ video['channel'] }}</p>
+                            <center>
+                                <a href="http://www.dailymotion.com/video/{{ video['id'] }}" class="btn btn-secondary">Ver Video</a>
+                            </center>
+                         </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+    </div>
+
+    <div>
+        <br>
+    </div>
+
+</body>
+</html>

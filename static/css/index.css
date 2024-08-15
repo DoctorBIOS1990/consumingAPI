@@ -1,0 +1,103 @@
+:root{
+    --span:rgb(174, 163, 67);
+    --fronColor: cornflowerblue;
+    --background:#2a2a2a;
+    --textColor: #fff;
+    --secondaryColor:#ccc;
+    --border-bottom:#ffffff1a;
+    --secondaryBackground: #333333;
+    --boxBackground:#ffffff99;
+    --textButtonHover:#010101;
+    --readHover:#202020;
+}
+
+*{
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'MontSerrat';
+}
+
+body{
+    background-color: #202020;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color-burn;
+}
+
+h1{
+    color: #2783fb;
+    display: inline;
+}
+
+span{
+  color:rgb(237, 221, 83);
+  animation-name: transition;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+
+.card{
+    margin-top: 10px;
+    transition: all .45s ease;
+}
+
+.card:hover{
+    transform:scale(1.1);
+    transition: all .45s ease;
+    z-index: 1;
+}
+
+#logo{
+    animation-name: transition_img;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;        
+}
+
+img{
+    max-height: 200px;
+}
+
+hr{
+  color: #cdcdcd;  
+}
+.card-text{
+    margin-top: 10px;
+}
+
+#begin{
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+@keyframes transition
+    {
+        0%{
+            -webkit-filter: drop-shadow(5px 5px 5px #cdcdcd);
+            filter: drop-shadow(5px 5px 5px #fefdfd);            
+        }
+
+        50%{
+            -webkit-filter: drop-shadow(5px 5px 5px #2865ea);
+            filter: drop-shadow(5px 5px 5px #2865ea);
+        }
+
+        100%{
+            -webkit-filter: drop-shadow(5px 5px 5px #8ea640);
+                filter: drop-shadow(5px 5px 5px #8ea640);
+        }
+        
+    }
+
+    @keyframes transition_img
+    {
+        0% {transform: translateY(10px);}
+        30% {transform: translateY(-10px);}
+        60% {transform: translateY(10px);}
+        80% {transform: translateY(-10px);}
+        100% {transform: translateY(10px);}
+    }
