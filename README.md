@@ -5,7 +5,7 @@ Run command to run server.
 python app.py 
 ```
 
-# Some categories channels:
+# Categories channels:
 <ul>
   <li>Sport</li>
   <li>TV</li>
