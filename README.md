@@ -15,7 +15,7 @@ python app.py
   <li>News</li>
 </ul>
 
-# :camera_flash: Screenshots
+# :camera_flash: Screenshot
 <div align="center">
   <img src="https://github.com/DoctorBIOS1990/consumingAPI/blob/main/(Screenshot)/Screenshot.jpg">
 </div>
