@@ -12,7 +12,7 @@
 }
 
 *{
-    text-decoration: none;
+    text-decoration: none !important;
     scroll-behavior: smooth;
     box-sizing: border-box;
     font-family: 'MontSerrat';
@@ -44,10 +44,37 @@ span{
     transition: all .45s ease;
 }
 
+.myBtn{
+    background-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0%,rgb(107, 112, 121)), color-stop(99%,rgb(14, 14, 14)));
+    color:#ccc;
+    transition: all .45s ease;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.myBtn:hover{
+    background-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0%,rgb(255, 255, 255)), color-stop(99%,rgb(14, 14, 14)));
+    color:black;
+    font-weight:bold ;
+    border: #202020 solid 2px;
+}
+
+select{
+    width:200px; 
+    text-align: center;
+    padding: 6px;
+    background-color: #2a2a2a;
+    color:#ccc;
+    cursor: pointer;
+}
+
 .card:hover{
     transform:scale(1.1);
     transition: all .45s ease;
     z-index: 1;
+    box-shadow: 1px 1px 10px black, 1px 1px 50px, 1px 1px 50px;
 }
 
 #logo{
@@ -57,13 +84,22 @@ span{
     animation-iteration-count: infinite;        
 }
 
-img{
-    max-height: 200px;
+#poster{
+    height: 200px;
+    object-fit: cover;
+}
+
+#title{
+    width: 98%;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 hr{
   color: #cdcdcd;  
 }
+
 .card-text{
     margin-top: 10px;
 }
@@ -73,6 +109,21 @@ hr{
     padding-bottom: 50px;
     padding-top: 50px;
 }
+
+.btn{
+    /**overrride**/
+    background-color: #ffd042 !important;
+    color: black;
+    font-weight:bold;
+    border: black solid 2px;
+}
+
+.btn:Hover{
+    /**overrride**/
+    background-color: #92700a !important;
+    border: black solid 2px;
+}
+
 
 @keyframes transition
     {
@@ -93,11 +144,11 @@ hr{
         
     }
 
-    @keyframes transition_img
-    {
-        0% {transform: translateY(10px);}
-        30% {transform: translateY(-10px);}
-        60% {transform: translateY(10px);}
-        80% {transform: translateY(-10px);}
-        100% {transform: translateY(10px);}
-    }
+@keyframes transition_img
+{
+    0% {transform: translateY(10px);}
+    30% {transform: translateY(-10px);}
+    60% {transform: translateY(10px);}
+    80% {transform: translateY(-10px);}
+    100% {transform: translateY(10px);}
+}

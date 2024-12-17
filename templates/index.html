@@ -15,18 +15,32 @@
     <h1>Consuming API for <span>Python + Flask</span></h1>
     </div>
 
+    <center>
+        <form action="/category" method="POST" style="margin-bottom: 50px;">
+        <select name="categoria" id="categoria">
+            <option disabled selected>Categorias</option>
+            <option value="sport">Sport</option>
+            <option value="news">News</option>
+            <option value="tv">TV</option>
+            <option value="videogames">Video Games</option>
+            <option value="fun">Fun</option>
+            <option value="shortfilms">Short Films</option>
+        </select>
+        <button class="btn btn-success">Enviar</button>
+    </form>
+    </center>
+
     <div class="container">
             <div class="row">
                 {% for video in data %}
                 <div class="col-md-3">
                     <div class="card">
-                        <img class="card-img-top" src="http://www.dailymotion.com/thumbnail/video/{{ video['id'] }}" alt="Title" />
+                        <img id="poster" class="card-img-top" src="http://www.dailymotion.com/thumbnail/video/{{ video['id'] }}" alt="Title" />
                         <div class="card-body">
-                            <strong class="card-title">{{ video['title'] }}</strong>
-                            
-                            <p class="card-text"> Channel: {{ video['channel'] }}</p>
+                            <p id="title"><strong>{{ video['title'] }}</strong></p>
+                            <p class="card-text"> <strong>Channel:</strong> {{ video['channel'] }}</p>
                             <center>
-                                <a href="http://www.dailymotion.com/video/{{ video['id'] }}" class="btn btn-secondary">Ver Video</a>
+                                <a href="http://www.dailymotion.com/video/{{ video['id'] }}" class="myBtn">Ver Video</a>
                             </center>
                          </div>
                     </div>
