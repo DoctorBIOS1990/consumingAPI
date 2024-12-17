@@ -10,3 +10,8 @@ Run command :python app.py to run server.
   <li>Fun</li>
   <li>News</li>
 </ul>
+
+# :camera_flash: Screenshots
+<div align="center">
+  <img src="https://github.com/DoctorBIOS1990/consumingAPI/blob/main/(Screenshot)/Screenshot.jpg">
+</div>
