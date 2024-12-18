@@ -31,6 +31,14 @@ h1{
     display: inline;
 }
 
+h2, label{
+    color: #ccc;
+}
+
+label{
+    margin-left:30px;
+}
+
 span{
   color:rgb(237, 221, 83);
   animation-name: transition;
@@ -61,13 +69,24 @@ span{
     border: #202020 solid 2px;
 }
 
-select{
+#categoria{
     width:200px; 
     text-align: center;
     padding: 6px;
     background-color: #2a2a2a;
     color:#ccc;
     cursor: pointer;
+}
+
+#count{
+    width:60px; 
+    text-align: center;
+    padding: 6px;
+    background-color: #2a2a2a;
+    color:#ccc;
+    cursor: pointer;
+    margin-right:10px;
+    margin-left:10px;
 }
 
 .card:hover{
@@ -110,18 +129,21 @@ hr{
     padding-top: 50px;
 }
 
-.btn{
+.btnEnviar{
     /**overrride**/
     background-color: #ffd042 !important;
     color: black;
     font-weight:bold;
+    padding:5px;
     border: black solid 2px;
+    border-radius:5px;
 }
 
-.btn:Hover{
+.btnEnviar:Hover{
     /**overrride**/
     background-color: #92700a !important;
     border: black solid 2px;
+    color:#ccc;
 }
 
 

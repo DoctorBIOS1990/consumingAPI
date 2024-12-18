@@ -11,22 +11,31 @@
 </head>
 <body>
     <div id="begin">
-    <img id="logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="100"/>
-    <h1>Consuming API for <span>Python + Flask</span></h1>
+        <img id="logo" src="static/images/logo.svg" width="100"/>
+        <h1>Consuming API for <span>Python + Flask</span></h1>
     </div>
 
+    {% if data %}
     <center>
         <form action="/category" method="POST" style="margin-bottom: 50px;">
+        <label for="categoria">Categorias: </label>
         <select name="categoria" id="categoria">
-            <option disabled selected>Categorias</option>
             <option value="sport">Sport</option>
             <option value="news">News</option>
-            <option value="tv">TV</option>
+            <option value="tv" selected>TV</option>
             <option value="videogames">Video Games</option>
             <option value="fun">Fun</option>
             <option value="shortfilms">Short Films</option>
         </select>
-        <button class="btn btn-success">Enviar</button>
+        <label for="count">Limite: </label>
+        <select name="count" id="count">
+            <option value="30">30</option>
+            <option value="20">20</option>
+            <option value="10" selected>10</option>
+            <option value="5">5</option>
+        </select>
+
+        <button class="btnEnviar">Enviar</button>
     </form>
     </center>
 
@@ -48,10 +57,15 @@
                 {% endfor %}
             </div>
     </div>
-
+    
     <div>
         <br>
     </div>
-
+    {% else %}
+        <center>
+            <h2>No se pudieron cargar los datos. </br>
+                Verifique su conexión a internet.</h2>
+        </center>
+    {% endif %}
 </body>
 </html>
