@@ -1,5 +1,5 @@
 # :electric_plug: Consuming API Rest
-Run command to run server.
+Command to run server.
 
 ```python
 python app.py 
